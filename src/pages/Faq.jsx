@@ -1,0 +1,98 @@
+import React, { useState } from "react";
+import { FiPlus, FiMinus } from "react-icons/fi";
+
+const faqs = [
+  {
+    question: "What should I wear?",
+    answer:
+      "We'd love to see you in cool tones — sage, dusty blue, and ivory. Feel free to dress it up; formal/semi-formal attire is welcome.",
+  },
+  {
+    question: "Can I bring a plus one?",
+    answer:
+      "Seats are limited, so only guests specifically named on the invitation will have a reserved spot. Reach out to us if you have questions about your invite.",
+  },
+  {
+    question: "Are kids welcome?",
+    answer:
+      "As much as we love your little ones, this will be an adults-only celebration — with the exception of immediate family.",
+  },
+  {
+    question: "Is there parking at the venue?",
+    answer:
+      "Yes, on-site parking is available at both the ceremony and reception venues. We'll also have ushers on hand to help direct you.",
+  },
+  {
+    question: "What time should I arrive?",
+    answer:
+      "The ceremony will begin promptly at 2pm. Please plan to arrive at least 30 minutes early to find your seat and mingle. (And please, let's leave 'African Time' at the door for this one! 😉)",
+  },
+  {
+    question: "Will there be a gift registry?",
+    answer:
+      "Your presence is truly the greatest gift. If you'd like to bless us further, details will be shared closer to the date.",
+  },
+];
+
+function FaqItem({ question, answer }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="py-6">
+      <button
+        onClick={() => setOpen((prev) => !prev)}
+        className="w-full flex items-center justify-between gap-4 text-left"
+      >
+        <span className="font-display text-xl md:text-2xl text-ink italic">
+          {question}
+        </span>
+        <span className="shrink-0 w-6 h-6 flex items-center justify-center text-green-600 cursor-pointer">
+          {open ? <FiMinus size={18} /> : <FiPlus size={18} />}
+        </span>
+      </button>
+
+      <div
+        className={`grid transition-all duration-300 ease-in-out ${
+          open
+            ? "grid-rows-[1fr] opacity-100 mt-3"
+            : "grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <p className="font-body text-base text-ink/70 leading-relaxed">
+            {answer}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function Faq() {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <main className="flex-1 flex flex-col items-center px-6 py-20">
+        <div className="text-center mb-16">
+          <p className="font-body text-xs tracking-wideish uppercase text-green-600 font-medium mb-4 mt-3">
+            Faq
+          </p>
+          <h1 className="font-display text-4xl md:text-6xl text-[#401d15]">
+            All You <span className="italic text-green-600">Need To Know</span>
+          </h1>
+
+          <div className="flex items-center justify-center gap-4 mt-6">
+            <span className="w-14 h-px bg-green-600" />
+            <span className="w-2.5 h-2.5 bg-green-600 rotate-45" />
+            <span className="w-14 h-px bg-green-600" />
+          </div>
+        </div>
+
+        <div className="w-full max-w-2xl divide-y divide-sage-light">
+          {faqs.map((faq) => (
+            <FaqItem key={faq.question} {...faq} />
+          ))}
+        </div>
+      </main>
+    </div>
+  );
+}
