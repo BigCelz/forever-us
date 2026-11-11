@@ -8,7 +8,8 @@ const links = [
   { to: "/our-story", label: "Our Story" },
   { to: "/details", label: "Details" },
   { to: "/faq", label: "FAQ" },
-    { to: "/photobook", label: "Photo Book" },
+  { to: "/photobook", label: "Photo Book" },
+  { to: "/asoebi", label: "Asoebi" },
 ];
 
 const linkBase =
@@ -19,7 +20,7 @@ export default function Nav() {
 
   return (
     <nav className="w-full fixed top-0 left-0 right-0 z-40 bg-cream border-b border-sage-light">
-      <div className="h-20 flex items-center justify-between px-6">
+      <div className="h-20 flex items-center justify-between md:px-6 px-3">
         {/* Brand */}
         <NavLink to="/" end className="flex items-center gap-3">
           {/* Swap this span for <img src="/logo.png" ... /> once you have a real logo */}

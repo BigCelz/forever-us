@@ -18,7 +18,7 @@ export default function AllPhotos() {
           <p className="font-body text-xs tracking-wideish uppercase text-green-600 font-medium mb-4 mt-3">
             Gallery
           </p>
-          <h1 className="font-display text-4xl md:text-6xl text-ink">
+          <h1 className="font-display text-4xl md:text-6xl text-[#401d15]">
             Full Photo <span className="italic text-green-600">Album</span>
           </h1>
         </div>

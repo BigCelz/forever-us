@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Faq from "./pages/Faq";
 import PhotoBook from "./pages/PhotoBook";
 import AllPhotos from "./pages/AllPhotos";
+import Asoebi from "./pages/Asoebi";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
             <Route path="/faq" element={<Faq />} />
             <Route path="/photobook" element={<PhotoBook />} />
             <Route path="/photobook/all" element={<AllPhotos />} />
+            <Route path="/asoebi" element={<Asoebi />} />
           </Routes>
         </div>
         <Footer />
