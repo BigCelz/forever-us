@@ -12,7 +12,7 @@ const photos = [
 
 export default function PhotoBook() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-[#eef2ea]">
       <main className="flex-1 flex flex-col items-center py-20">
         <div className="text-center mb-16 px-6">
           <p className="font-body text-xs tracking-wideish uppercase text-green-600 font-medium mb-4 mt-3">

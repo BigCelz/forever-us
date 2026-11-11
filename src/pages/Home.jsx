@@ -6,43 +6,43 @@ const HERO_IMAGE =
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="flex flex-col">
       <main
-        className="relative flex-1 flex flex-col items-center justify-center text-center px-6 py-24 bg-cover bg-center"
+        className="relative min-h-dvh flex flex-col items-center justify-center text-center px-6 pt-28 pb-8 bg-cover bg-center"
         style={{ backgroundImage: `url(${HERO_IMAGE})` }}
       >
         <div className="absolute inset-0 bg-ink/55" />
 
         <div className="relative z-10 flex flex-col items-center">
-          <p className="font-body text-xs tracking-wideish uppercase text-cream/70 mb-6">
+          <p className="font-body text-xs tracking-wideish uppercase text-cream/70 mb-4 md:mb-6">
             Together with their families
           </p>
 
-          <h1 className="font-display text-6xl md:text-8xl text-cream leading-tight">
+          <h1 className="font-display text-5xl md:text-7xl text-cream leading-none">
             Amara
             <br />
-            <span className="italic text-green-600 text-6xl md:text-8xl">
+            <span className="italic text-green-600 text-5xl md:text-7xl">
               &
             </span>
             <br />
             Efe
           </h1>
 
-          <div className="w-24 h-px bg-green-600 my-8" />
+          <div className="w-24 h-px bg-green-600 my-5 md:my-6" />
 
-          <p className="font-display text-2xl md:text-3xl text-cream/90 italic">
+          <p className="font-display text-xl md:text-2xl text-cream/90 italic">
             are getting married
           </p>
 
-          <p className="font-body text-sm text-cream/70 mt-4 tracking-wideish uppercase">
-            14th March, 2027 · Lagos, Nigeria
+          <p className="font-body text-xs md:text-sm text-cream/70 mt-3 tracking-wideish uppercase">
+            14th December, 2026 · Lagos, Nigeria
           </p>
 
-          <div className="mt-12">
+          <div className="mt-6 md:mt-8">
             <Countdown />
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 mt-14">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-8 md:mt-10">
             <Link
               to="/our-story"
               className="px-8 py-3 font-body text-sm tracking-wideish uppercase bg-cream text-ink hover:bg-cream/90 transition-colors duration-200"
@@ -59,7 +59,7 @@ export default function Home() {
         </div>
       </main>
 
-      <div className="py-16 px-6 text-center">
+      <div className="py-16 px-6 text-center bg-[#eef2ea]">
         <p className="font-display text-xl md:text-2xl italic text-ink/80">
           Amara &amp; Efe — a decade in the making. Welcome!
         </p>

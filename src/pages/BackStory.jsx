@@ -85,7 +85,7 @@ export default function Backstory() {
   const current = stories[index];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-[#eef2ea]">
       <main className="flex-1 px-6 py-20">
         <div className="text-center mb-16">
           <p className="font-body text-xs tracking-wideish uppercase text-green-600 font-medium mb-4 mt-3">

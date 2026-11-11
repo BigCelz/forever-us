@@ -38,7 +38,7 @@ export default function Nav() {
               to={link.to}
               end={link.end}
               className={({ isActive }) =>
-                `${linkBase} ${isActive ? "!text-green-600 underline" : ""}`
+                `${linkBase} ${isActive ? "text-green-600! underline" : ""}`
               }
             >
               {link.label}
