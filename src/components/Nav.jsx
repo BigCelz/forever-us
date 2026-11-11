@@ -24,9 +24,9 @@ export default function Nav() {
         {/* Brand */}
         <NavLink to="/" end className="flex items-center gap-3">
           {/* Swap this span for <img src="/logo.png" ... /> once you have a real logo */}
-          <span className="w-9 h-9 rounded-full bg-sage-light flex items-center justify-center font-display text-sm text-ink">
+          {/* <span className="w-9 h-9 rounded-full bg-sage-light flex items-center justify-center font-display text-sm text-ink">
             A&E
-          </span>
+          </span> */}
           <span className="font-display md:text-4xl text-2xl text-green-600">A + E</span>
         </NavLink>
 
