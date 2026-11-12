@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#3a2a20] text-[#faf5ec] text-center py-20 px-6">
       <p className="font-body text-xs tracking-wideish uppercase text-[#f2c9a9] mb-6">
-        #AE27
+        #FI26
       </p>
 
       <h2 className="font-display text-5xl md:text-7xl">
