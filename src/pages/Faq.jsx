@@ -43,10 +43,10 @@ function FaqItem({ question, answer }) {
         onClick={() => setOpen((prev) => !prev)}
         className="w-full flex items-center justify-between gap-4 text-left"
       >
-        <span className="font-display text-xl md:text-2xl text-ink italic">
+        <span className="font-display text-xl md:text-2xl text-[#4a3226] italic">
           {question}
         </span>
-        <span className="shrink-0 w-6 h-6 flex items-center justify-center text-green-600 cursor-pointer">
+        <span className="shrink-0 w-6 h-6 flex items-center justify-center text-[#7a8b64] cursor-pointer">
           {open ? <FiMinus size={18} /> : <FiPlus size={18} />}
         </span>
       </button>
@@ -59,7 +59,7 @@ function FaqItem({ question, answer }) {
         }`}
       >
         <div className="overflow-hidden">
-          <p className="font-body text-base text-ink/70 leading-relaxed">
+          <p className="font-body text-base text-[#4a3226]/70 leading-relaxed">
             {answer}
           </p>
         </div>
@@ -70,24 +70,24 @@ function FaqItem({ question, answer }) {
 
 export default function Faq() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#eef2ea]">
+    <div className="min-h-screen flex flex-col bg-[#faf5ec]">
       <main className="flex-1 flex flex-col items-center px-6 py-20">
         <div className="text-center mb-16">
-          <p className="font-body text-xs tracking-wideish uppercase text-green-600 font-medium mb-4 mt-3">
+          <p className="font-body text-xs tracking-wideish uppercase text-[#7a8b64] font-medium mb-4 mt-3">
             Faq
           </p>
-          <h1 className="font-display text-4xl md:text-6xl text-[#401d15]">
-            All You <span className="italic text-green-600">Need To Know</span>
+          <h1 className="font-display text-4xl md:text-6xl text-[#4a3226]">
+            All You <span className="italic text-[#7a8b64]">Need To Know</span>
           </h1>
 
           <div className="flex items-center justify-center gap-4 mt-6">
-            <span className="w-14 h-px bg-green-600" />
-            <span className="w-2.5 h-2.5 bg-green-600 rotate-45" />
-            <span className="w-14 h-px bg-green-600" />
+            <span className="w-14 h-px bg-[#7a8b64]" />
+            <span className="w-2.5 h-2.5 bg-[#f2c9a9] rotate-45" />
+            <span className="w-14 h-px bg-[#7a8b64]" />
           </div>
         </div>
 
-        <div className="w-full max-w-2xl divide-y divide-sage-light">
+        <div className="w-full max-w-2xl divide-y divide-[#e4e9d8]">
           {faqs.map((faq) => (
             <FaqItem key={faq.question} {...faq} />
           ))}

@@ -19,41 +19,45 @@ const events = [
 
 export default function Events() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#eef2ea]">
+    <div className="min-h-screen flex flex-col bg-[#faf5ec]">
       <main className="flex-1 flex flex-col items-center px-6 py-20">
         <div className="text-center mb-16">
-          <p className="font-body text-xs tracking-wideish uppercase text-green-600 font-medium mb-4 mt-3">
+          <p className="font-body text-xs tracking-wideish uppercase text-[#7a8b64] font-medium mb-4 mt-3">
             Schedule of Events
           </p>
-          <h1 className="font-display text-4xl md:text-6xl text-[#401d15]">
-            Event <span className="italic text-green-600">Details</span>
+          <h1 className="font-display text-4xl md:text-6xl text-[#4a3226]">
+            Event <span className="italic text-[#7a8b64]">Details</span>
           </h1>
 
           <div className="flex items-center justify-center gap-4 mt-6">
-            <span className="w-14 h-px bg-green-600" />
-            <span className="w-2.5 h-2.5 bg-green-600 rotate-45" />
-            <span className="w-14 h-px bg-green-600" />
+            <span className="w-14 h-px bg-[#7a8b64]" />
+            <span className="w-2.5 h-2.5 bg-[#f2c9a9] rotate-45" />
+            <span className="w-14 h-px bg-[#7a8b64]" />
           </div>
         </div>
 
-        <div className="w-full max-w-4xl divide-y divide-sage-light">
+        <div className="w-full max-w-4xl divide-y divide-[#e4e9d8]">
           {events.map((event) => (
             <div
               key={event.title}
               className="py-10 flex flex-col md:flex-row items-center justify-between gap-8"
             >
               <div className="text-center md:text-left">
-                <h2 className="font-display text-3xl text-ink italic mb-2">
+                <h2 className="font-display text-3xl text-[#4a3226] italic mb-2">
                   {event.title}
                 </h2>
-                <p className="font-body text-sm tracking-wideish uppercase text-green-500 mb-4">
+                <p className="font-body text-sm tracking-wideish uppercase text-[#7a8b64] mb-4">
                   {event.time}
                 </p>
-                <p className="font-body text-base text-ink/80">{event.venue}</p>
-                <p className="font-body text-sm text-ink/50">{event.address}</p>
+                <p className="font-body text-base text-[#4a3226]/80">
+                  {event.venue}
+                </p>
+                <p className="font-body text-sm text-[#4a3226]/60">
+                  {event.address}
+                </p>
               </div>
 
-              <div className="w-full md:w-72 h-48 rounded-lg overflow-hidden shadow-sm border border-sage-light shrink-0">
+              <div className="w-full md:w-72 h-48 rounded-lg overflow-hidden shadow-sm border border-[#f2c9a9]/60 shrink-0">
                 <iframe
                   title={`${event.title} map`}
                   src={event.mapSrc}
@@ -68,7 +72,7 @@ export default function Events() {
           ))}
         </div>
 
-        <p className="font-body text-sm text-ink/50 italic mt-16">
+        <p className="font-body text-sm text-[#4a3226]/60 italic mt-16">
           Dress code: Cool tones — sage, dusty blue, ivory
         </p>
       </main>
