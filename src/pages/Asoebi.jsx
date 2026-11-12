@@ -1,30 +1,20 @@
-const options = [
-  {
-    key: "bride",
-    title: "Bride's Side",
-    fabric: "Emerald Aso Oke",
-    swatch: "bg-[#7a8b64]",
-    details: "Emerald green with gold trim. Gele and ipele to match.",
-  },
-  {
-    key: "groom",
-    title: "Groom's Side",
-    fabric: "Cream Brocade",
-    swatch: "bg-[#e9dfc9]",
-    details: "Cream with subtle gold detailing. Cap to match.",
-  },
+const colours = [
+  { key: "brown", name: "Brown", swatch: "bg-[#4a3226]" },
+  { key: "green", name: "Green", swatch: "bg-[#7a8b64]" },
+  { key: "peach", name: "Peach", swatch: "bg-[#f2c9a9]" },
+  { key: "milk", name: "Milk", swatch: "bg-[#faf5ec]" },
 ];
 
 export default function Asoebi() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#faf5ec]">
+    <div className="min-h-screen flex flex-col bg-[#efe4d2]">
       <main className="flex-1 px-6 py-20">
         <div className="text-center mb-16">
-          <p className="font-body text-xs tracking-wideish uppercase text-[#7a8b64] font-medium mb-4 mt-3">
+          <p className="font-body text-xs tracking-wideish uppercase text-[#6b7d55] font-medium mb-4 mt-3">
             Asoebi
           </p>
           <h1 className="font-display text-4xl md:text-6xl text-[#4a3226]">
-            Dress With <span className="italic text-[#7a8b64]">Us</span>
+            Dress With <span className="italic text-[#6b7d55]">Us</span>
           </h1>
 
           <div className="flex items-center justify-center gap-4 mt-6">
@@ -34,25 +24,19 @@ export default function Asoebi() {
           </div>
 
           <p className="font-body text-base leading-relaxed text-[#4a3226]/80 max-w-xl mx-auto mt-8">
-            We'd love to see you in our colours. Here's what we have in mind
-            for each side of the family and friends.
+            We'd love to see you in our colours. The colours of the day are
+            brown, green, peach and milk.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
-          {options.map((item) => (
-            <div key={item.key} className="border border-[#f2c9a9]/60">
-              <div className={`h-56 ${item.swatch}`} />
-              <div className="p-6">
-                <p className="font-body text-xs tracking-wideish uppercase text-[#4a3226]/60 mb-2">
-                  {item.title}
-                </p>
-                <h2 className="font-display text-3xl text-[#7a8b64] mb-3">
-                  {item.fabric}
+        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          {colours.map((item) => (
+            <div key={item.key} className="border border-[#4a3226]/15">
+              <div className={`h-40 md:h-56 ${item.swatch}`} />
+              <div className="p-4 text-center bg-[#faf5ec]">
+                <h2 className="font-display text-2xl text-[#6b7d55]">
+                  {item.name}
                 </h2>
-                <p className="font-body text-base leading-relaxed text-[#4a3226]/80">
-                  {item.details}
-                </p>
               </div>
             </div>
           ))}

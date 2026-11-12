@@ -70,7 +70,7 @@ function FaqItem({ question, answer }) {
 
 export default function Faq() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#faf5ec]">
+    <div className="min-h-screen flex flex-col bg-[#efe4d2]">
       <main className="flex-1 flex flex-col items-center px-6 py-20">
         <div className="text-center mb-16">
           <p className="font-body text-xs tracking-wideish uppercase text-[#7a8b64] font-medium mb-4 mt-3">
