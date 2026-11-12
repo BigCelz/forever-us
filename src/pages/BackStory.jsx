@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const stories = [
@@ -84,6 +84,10 @@ export default function Backstory() {
 
   const current = stories[index];
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [index]);
+
   return (
     <div className="min-h-screen flex flex-col bg-[#efe4d2]">
       <main className="flex-1 px-6 py-20">
@@ -92,8 +96,7 @@ export default function Backstory() {
             Our Story
           </p>
           <h1 className="font-display text-4xl md:text-6xl text-[#4a3226]">
-            The Journey to{" "}
-            <span className="italic text-[#7a8b64]">I Do</span>
+            The Journey to <span className="italic text-[#7a8b64]">I Do</span>
           </h1>
 
           <div className="flex items-center justify-center gap-4 mt-6">
