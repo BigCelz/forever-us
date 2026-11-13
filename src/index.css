@@ -25,6 +25,30 @@ body {
   @apply bg-cream text-ink font-body;
 }
 
+@keyframes spinSlow {
+  to {
+    transform: rotate(405deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #7a8b64, #f2c9a9, #7a8b64);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 5s linear infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

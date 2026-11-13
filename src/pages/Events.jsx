@@ -1,80 +1,206 @@
+import { PiChurchBold } from "react-icons/pi";
+import { FaGlassCheers, FaMapMarkerAlt } from "react-icons/fa";
+
 const events = [
   {
     title: "Ceremony",
     time: "10:00 AM",
-    venue: "St. Leo's Catholic Church",
-    address: "12 Admiralty Way, Lekki Phase 1, Lagos",
+    icon: PiChurchBold,
+    venue: "Immaculate Conception Catholic Church, Sabon Tasha, Kaduna",
     mapSrc:
-      "https://maps.google.com/maps?q=St.%20Leo's%20Catholic%20Church%2C%2012%20Admiralty%20Way%2C%20Lekki%20Phase%201%2C%20Lagos&t=&z=15&ie=UTF8&iwloc=&output=embed",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.7507269710213!2d7.468200299999999!3d10.4413447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104d498833da12ed%3A0xdca8bda7a03adad6!2sImmaculate%20Conception%20Catholic%20Church%20Sabo.!5e0!3m2!1sen!2sng!4v1794565715310!5m2!1sen!2sng",
   },
   {
     title: "Reception",
-    time: "1:00 PM",
-    venue: "The Palms Garden Hall",
-    address: "45 Ozumba Mbadiwe Ave, Victoria Island, Lagos",
+    time: "2:00 PM",
+    icon: FaGlassCheers,
+    venue:
+      "MAUREB EVENT CENTRE BY REFINERY JUNCTION, OPPOSITE ST. AUGUSTINE CATHOLIC CHURCH, MAHUTA, KADUNA.",
     mapSrc:
-      "https://maps.google.com/maps?q=The%20Palms%20Garden%20Hall%2C%2045%20Ozumba%20Mbadiwe%20Ave%2C%20Victoria%20Island%2C%20Lagos&t=&z=15&ie=UTF8&iwloc=&output=embed",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4333.591959753894!2d7.496181278384739!3d10.442126138637857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104d35a10b91d9ef%3A0x2b46bb28829de71b!2sMaureb%20Event%20Center!5e0!3m2!1sen!2sng!4v1794565150155!5m2!1sen!2sng",
   },
 ];
 
 export default function Events() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#efe4d2]">
-      <main className="flex-1 flex flex-col items-center px-6 py-20">
-        <div className="text-center mb-16">
+    <div className="relative min-h-screen flex flex-col bg-[#efe4d2] overflow-hidden">
+      <style>{`
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(32px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes floaty {
+          0%, 100% { transform: translateY(0) scale(1); }
+          50% { transform: translateY(-24px) scale(1.06); }
+        }
+        @keyframes spinSlow {
+          to { transform: rotate(405deg); }
+        }
+        @keyframes shimmer {
+          0% { background-position: 0% 50%; }
+          100% { background-position: 200% 50%; }
+        }
+        .fade-up { opacity: 0; animation: fadeUp 0.9s ease forwards; }
+        .floaty { animation: floaty 9s ease-in-out infinite; }
+        .shimmer-text {
+          background: linear-gradient(90deg, #7a8b64, #f2c9a9, #7a8b64);
+          background-size: 200% auto;
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          animation: shimmer 5s linear infinite;
+        }
+      `}</style>
+
+      {/* Decorative background blobs */}
+      <div className="floaty pointer-events-none absolute -top-24 -left-24 w-80 h-80 rounded-full bg-[#f2c9a9]/40 blur-3xl" />
+      <div
+        className="floaty pointer-events-none absolute top-1/2 -right-32 w-96 h-96 rounded-full bg-[#7a8b64]/25 blur-3xl"
+        style={{ animationDelay: "2s" }}
+      />
+      <div
+        className="floaty pointer-events-none absolute -bottom-24 left-1/4 w-72 h-72 rounded-full bg-[#f2c9a9]/30 blur-3xl"
+        style={{ animationDelay: "4s" }}
+      />
+
+      <main className="relative flex-1 flex flex-col items-center px-6 py-20">
+        {/* Header */}
+        <div className="text-center mb-20 fade-up">
           <p className="font-body text-xs tracking-wideish uppercase text-[#7a8b64] font-medium mb-4 mt-3">
-            Schedule of Events
+            ✦ Schedule of Events ✦
           </p>
-          <h1 className="font-display text-4xl md:text-6xl text-[#4a3226]">
-            Event <span className="italic text-[#7a8b64]">Details</span>
+          <h1 className="font-display text-5xl md:text-7xl text-[#4a3226]">
+            Event{" "}
+            <span className="italic shimmer-text">Details</span>
           </h1>
 
-          <div className="flex items-center justify-center gap-4 mt-6">
+          <div className="flex items-center justify-center gap-4 mt-8">
             <span className="w-14 h-px bg-[#7a8b64]" />
-            <span className="w-2.5 h-2.5 bg-[#f2c9a9] rotate-45" />
+            <span
+              className="w-3 h-3 bg-[#f2c9a9] rotate-45"
+              style={{ animation: "spinSlow 8s linear infinite" }}
+            />
             <span className="w-14 h-px bg-[#7a8b64]" />
           </div>
         </div>
 
-        <div className="w-full max-w-4xl divide-y divide-[#e4e9d8]">
-          {events.map((event) => (
-            <div
-              key={event.title}
-              className="py-10 flex flex-col md:flex-row items-center justify-between gap-8"
-            >
-              <div className="text-center md:text-left">
-                <h2 className="font-display text-3xl text-[#4a3226] italic mb-2">
-                  {event.title}
-                </h2>
-                <p className="font-body text-sm tracking-wideish uppercase text-[#7a8b64] mb-4">
-                  {event.time}
-                </p>
-                <p className="font-body text-base text-[#4a3226]/80">
-                  {event.venue}
-                </p>
-                <p className="font-body text-sm text-[#4a3226]/60">
-                  {event.address}
-                </p>
-              </div>
+        {/* Events */}
+        <div className="relative w-full max-w-5xl space-y-16">
+          {/* Center timeline (desktop) */}
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#7a8b64]/50 to-transparent" />
 
-              <div className="w-full md:w-72 h-48 rounded-lg overflow-hidden shadow-sm border border-[#f2c9a9]/60 shrink-0">
-                <iframe
-                  title={`${event.title} map`}
-                  src={event.mapSrc}
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
+          {events.map((event, i) => {
+            const reversed = i % 2 === 1;
+            const EventIcon = event.icon;
+            return (
+              <div
+                key={event.title}
+                className="fade-up relative"
+                style={{ animationDelay: `${0.25 + i * 0.25}s` }}
+              >
+                {/* Timeline dot */}
+                <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-5 h-5 rounded-full bg-[#efe4d2] border-2 border-[#7a8b64] items-center justify-center">
+                  <span className="w-2 h-2 rounded-full bg-[#f2c9a9]" />
+                </div>
+
+                <div
+                  className={`group flex flex-col ${
+                    reversed ? "md:flex-row-reverse" : "md:flex-row"
+                  } items-center gap-8 md:gap-16`}
+                >
+                  {/* Info card */}
+                  <div className="w-full md:w-1/2">
+                    <div className="relative bg-white/50 backdrop-blur-sm rounded-3xl p-8 border border-[#f2c9a9]/60 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#f2c9a9]/40">
+                      <div className="relative">
+                        <div className="w-14 h-14 rounded-full bg-[#7a8b64] text-[#efe4d2] flex items-center justify-center mb-5 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110">
+                          <EventIcon size={26} />
+                        </div>
+
+                        <h2 className="font-display text-4xl text-[#4a3226] italic mb-3">
+                          {event.title}
+                        </h2>
+
+                        <span className="inline-block font-body text-sm tracking-wideish uppercase text-[#4a3226] bg-[#f2c9a9] px-4 py-1.5 rounded-full mb-5 font-medium">
+                          {event.time}
+                        </span>
+
+                        <p className="font-body text-base text-[#4a3226]/80 leading-relaxed mb-6">
+                          {event.venue}
+                        </p>
+
+                        <a
+                          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                            event.venue
+                          )}`}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-2 font-body text-sm text-[#7a8b64] font-medium border-b border-[#7a8b64]/40 pb-0.5 transition-all duration-300 hover:gap-3 hover:text-[#4a3226] hover:border-[#4a3226]"
+                        >
+                          <FaMapMarkerAlt size={14} />
+                          Get directions
+                          <span aria-hidden>→</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Map */}
+                  <div className="w-full md:w-1/2">
+                    <div className="relative">
+                      {/* Offset peach frame */}
+                      <div
+                        className={`absolute inset-0 rounded-3xl bg-[#f2c9a9] transition-transform duration-500 ${
+                          reversed
+                            ? "translate-x-3 translate-y-3 group-hover:translate-x-5 group-hover:translate-y-5"
+                            : "-translate-x-3 translate-y-3 group-hover:-translate-x-5 group-hover:translate-y-5"
+                        }`}
+                      />
+                      <div className="relative h-64 rounded-3xl overflow-hidden border-4 border-[#efe4d2] shadow-md">
+                        <iframe
+                          title={`${event.title} map`}
+                          src={event.mapSrc}
+                          width="100%"
+                          height="100%"
+                          style={{ border: 0 }}
+                          loading="lazy"
+                          referrerPolicy="no-referrer-when-downgrade"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
-        <p className="font-body text-sm text-[#4a3226]/60 italic mt-16">
-          Dress code: Cool tones — sage, dusty blue, ivory
-        </p>
+        {/* Color of the day */}
+        <div
+          className="fade-up mt-24 text-center"
+          style={{ animationDelay: "0.9s" }}
+        >
+          <p className="font-body text-xs tracking-wideish uppercase text-[#7a8b64] font-medium mb-5">
+            Color of the day
+          </p>
+          <div className="flex items-center justify-center gap-6 flex-wrap">
+            {[
+              { name: "Brown", hex: "#4a3226" },
+              { name: "Green", hex: "#7a8b64" },
+              { name: "Peach", hex: "#f2c9a9" },
+              { name: "Milk", hex: "#fffaf0" },
+            ].map((c) => (
+              <div key={c.name} className="flex flex-col items-center gap-2 group/swatch">
+                <span
+                  className="w-12 h-12 rounded-full border-2 border-white shadow-md transition-transform duration-300 group-hover/swatch:-translate-y-2 group-hover/swatch:scale-110"
+                  style={{ backgroundColor: c.hex }}
+                />
+                <span className="font-body text-sm italic text-[#4a3226]/70">
+                  {c.name}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
       </main>
     </div>
   );
