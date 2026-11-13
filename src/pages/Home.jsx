@@ -16,7 +16,7 @@ export default function Home() {
 
         <div className="relative z-10 flex flex-col items-center">
           <p className="font-body text-xs tracking-wideish uppercase text-[#f2c9a9] mb-4 md:mb-6">
-            Together with their families
+            ✦ Together with their families ✦
           </p>
 
           <h1 className="font-display text-5xl md:text-7xl text-[#faf5ec] leading-none">
@@ -26,10 +26,17 @@ export default function Home() {
               &
             </span>
             <br />
-            Isaac
+            <span className="italic shimmer-text">Isaac</span>
           </h1>
 
-          <div className="w-24 h-px bg-[#f2c9a9] my-5 md:my-6" />
+          <div className="flex items-center justify-center gap-4 my-5 md:my-6">
+            <span className="w-14 h-px bg-[#f2c9a9]" />
+            <span
+              className="w-3 h-3 bg-[#f2c9a9] rotate-45"
+              style={{ animation: "spinSlow 8s linear infinite" }}
+            />
+            <span className="w-14 h-px bg-[#f2c9a9]" />
+          </div>
 
           <p className="font-display text-xl md:text-2xl text-[#faf5ec]/90 italic">
             are getting married
