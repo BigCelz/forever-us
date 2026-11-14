@@ -15,15 +15,15 @@ export default function Footer() {
 
       <p className="font-body text-xs tracking-wideish uppercase text-[#faf5ec]/60 mt-16">
         Made with{" "}
-        <span className="underline underline-offset-4 decoration-[#f2c9a9] text-[#faf5ec]">
-          love
-        </span>{" "}
+        <spa>
+          ❤️
+        </spa>{" "}
         by{" "}
         <a
           href="https://wa.me/2347083429516"
           target="_blank"
           rel="noreferrer"
-          className="text-[#f2c9a9] hover:text-[#faf5ec] transition-colors duration-200"
+          className="text-[#f2c9a9] hover:text-[#faf5ec] transition-colors duration-200 underline underline-offset-4 decoration-[#f2c9a9]"
         >
           Celz
         </a>
