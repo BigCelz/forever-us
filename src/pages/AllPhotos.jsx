@@ -6,6 +6,9 @@ import img04 from "../assets/img04.jpeg";
 import img05 from "../assets/img05.jpeg";
 import img06 from "../assets/img06.jpeg";
 import img07 from "../assets/img07.jpeg";
+import img08 from "../assets/img08.jpeg";
+import img09 from "../assets/img09.jpeg";
+import img10 from "../assets/img10.jpeg";
 
 const photos = [
   { src: img01, alt: "Photo 1" },
@@ -15,6 +18,9 @@ const photos = [
   { src: img05, alt: "Photo 5" },
   { src: img06, alt: "Photo 6" },
   { src: img07, alt: "Photo 7" },
+  { src: img08, alt: "Photo 8" },
+  { src: img09, alt: "Photo 9" },
+  { src: img10, alt: "Photo 10" },
 ];
 
 export default function AllPhotos() {

@@ -45,7 +45,7 @@ export default function Nav() {
               className={({ isActive }) =>
                 `${linkBase} ${
                   isActive
-                    ? "text-[#7a8b64]! font-semibold underline decoration-[#f2c9a9]"
+                    ? "text-[#7a8b64]! hover:text-[#7a8b64]! font-semibold underline decoration-[#f2c9a9]"
                     : ""
                 }`
               }

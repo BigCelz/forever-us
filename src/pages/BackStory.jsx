@@ -1,36 +1,25 @@
 import { useEffect, useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import img08 from "../assets/img08.jpeg";
 
 const stories = [
   {
     key: "bride",
-    name: "Amara",
+    name: "Faith",
     label: "Her Story",
-    image:
-      "https://images.unsplash.com/photo-1586749902049-5c855d0c9d4c?fm=jpg&q=70&w=900&auto=format&fit=crop",
-    excerpt: `I grew up in Lekki, the last of four, which meant I learned early
-how to hold my own at a dinner table. I met Efe on a Tuesday I almost
-didn't leave the house for. Three years later, I still can't believe
-my luck.`,
-    full: `I grew up in Lekki, the last of four, which meant I learned early
-how to hold my own at a dinner table. I met Efe on a Tuesday I almost
-didn't leave the house for. Three years later, I still can't believe
-my luck.
+    image: img08,
+    excerpt: `I never knew exactly how my love story would unfold, but I always hoped it would be something beautiful. Then came you and somewhere along the way, the ordinary became special.`,
+    full: `I never knew exactly how my love story would unfold, but I always hoped it would be something beautiful. Then came you and somewhere along the way, the ordinary became special.
 
-We were introduced by a mutual friend at a birthday dinner neither of
-us really wanted to attend. He was quiet at first, the kind of quiet
-that made you want to know what he was actually thinking. Somewhere
-between the appetizer and the bill, I decided I wanted to find out.
+What started as two people getting to know each other became a friendship, a love, and a bond. We’ve shared laughter, little adventures, unexpected moments, and memories that have made our journey uniquely ours.
 
-The following months were texts that ran too long, a few terrible
-first dates disguised as "just catching up," and one very memorable
-Uber ride in the rain where he gave me his jacket and pretended he
-wasn't cold. I knew by December. I think he knew before I did.
+Now, I get to turn another page, walk towards my best friend, and make a promise that goes beyond today.
 
-Three years, one relocation, two family introductions, and a lot of
-jollof arguments later, he asked. I said yes before he finished the
-sentence.`,
-    quote: `"Every chapter brought us closer to this one."`,
+From getting to know you to marrying you, and I’m glad we got to make that Journey together.
+
+
+Here’s to forever and a day❤️`,
+    quote: `"From getting to know you to marrying you, and I’m glad we got to make that journey together."`,
   },
   {
     key: "groom",

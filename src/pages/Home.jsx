@@ -70,7 +70,7 @@ export default function Home() {
       {/* soft sage green band with brown text */}
       <div className="py-16 px-6 text-center bg-[#efe4d2]! border-t border-[#7a8b64]/30">
         <p className="font-display text-xl md:text-2xl italic text-[#4a3226]">
-          Faith &amp; Isaac — a decade in the making. Welcome!
+          Faith &amp; Isaac — From a beautiful beginning to a lifetime together.
         </p>
       </div>
     </div>

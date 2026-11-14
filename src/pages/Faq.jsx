@@ -5,7 +5,7 @@ const faqs = [
   {
     question: "What should I wear?",
     answer:
-      "We'd love to see you in cool tones — sage, dusty blue, and ivory. Feel free to dress it up; formal/semi-formal attire is welcome.",
+      "We'd love to see you in our colors of the day: brown, green, peach, and milk. Feel free to dress it up; formal/semi-formal attire is welcome.",
   },
   {
     question: "Can I bring a plus one?",
