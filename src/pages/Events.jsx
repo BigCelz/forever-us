@@ -24,34 +24,6 @@ const events = [
 export default function Events() {
   return (
     <div className="relative min-h-screen flex flex-col bg-[#efe4d2] overflow-hidden">
-      <style>{`
-        @keyframes fadeUp {
-          from { opacity: 0; transform: translateY(32px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes floaty {
-          0%, 100% { transform: translateY(0) scale(1); }
-          50% { transform: translateY(-24px) scale(1.06); }
-        }
-        @keyframes spinSlow {
-          to { transform: rotate(405deg); }
-        }
-        @keyframes shimmer {
-          0% { background-position: 0% 50%; }
-          100% { background-position: 200% 50%; }
-        }
-        .fade-up { opacity: 0; animation: fadeUp 0.9s ease forwards; }
-        .floaty { animation: floaty 9s ease-in-out infinite; }
-        .shimmer-text {
-          background: linear-gradient(90deg, #7a8b64, #f2c9a9, #7a8b64);
-          background-size: 200% auto;
-          -webkit-background-clip: text;
-          background-clip: text;
-          color: transparent;
-          animation: shimmer 5s linear infinite;
-        }
-      `}</style>
-
       {/* Decorative background blobs */}
       <div className="floaty pointer-events-none absolute -top-24 -left-24 w-80 h-80 rounded-full bg-[#f2c9a9]/40 blur-3xl" />
       <div
@@ -65,7 +37,7 @@ export default function Events() {
 
       <main className="relative flex-1 flex flex-col items-center px-6 py-20">
         {/* Header */}
-        <div className="text-center mb-20 fade-up">
+        <div className="text-center mb-20">
           <p className="font-body text-xs tracking-wideish uppercase text-[#7a8b64] font-medium mb-4 mt-3">
             ✦ Schedule of Events ✦
           </p>
@@ -87,17 +59,13 @@ export default function Events() {
         {/* Events */}
         <div className="relative w-full max-w-5xl space-y-16">
           {/* Center timeline (desktop) */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#7a8b64]/50 to-transparent" />
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-[#7a8b64]/50 to-transparent" />
 
           {events.map((event, i) => {
             const reversed = i % 2 === 1;
             const EventIcon = event.icon;
             return (
-              <div
-                key={event.title}
-                className="fade-up relative"
-                style={{ animationDelay: `${0.25 + i * 0.25}s` }}
-              >
+              <div key={event.title} className="relative">
                 {/* Timeline dot */}
                 <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-5 h-5 rounded-full bg-[#efe4d2] border-2 border-[#7a8b64] items-center justify-center">
                   <span className="w-2 h-2 rounded-full bg-[#f2c9a9]" />
@@ -109,7 +77,11 @@ export default function Events() {
                   } items-center gap-8 md:gap-16`}
                 >
                   {/* Info card */}
-                  <div className="w-full md:w-1/2">
+                  <div
+                    className="w-full md:w-1/2"
+                    data-aos={reversed ? "fade-left" : "fade-right"}
+                    data-aos-duration="1600"
+                  >
                     <div className="relative bg-white/50 backdrop-blur-sm rounded-3xl p-8 border border-[#f2c9a9]/60 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#f2c9a9]/40">
                       <div className="relative">
                         <div className="w-14 h-14 rounded-full bg-[#7a8b64] text-[#efe4d2] flex items-center justify-center mb-5 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110">
@@ -145,7 +117,12 @@ export default function Events() {
                   </div>
 
                   {/* Map */}
-                  <div className="w-full md:w-1/2">
+                  <div
+                    className="w-full md:w-1/2"
+                    data-aos={reversed ? "fade-right" : "fade-left"}
+                    data-aos-duration="1600"
+                    data-aos-delay="200"
+                  >
                     <div className="relative">
                       {/* Offset peach frame */}
                       <div
@@ -175,11 +152,11 @@ export default function Events() {
         </div>
 
         {/* Color of the day */}
-        <div
-          className="fade-up mt-24 text-center"
-          style={{ animationDelay: "0.9s" }}
-        >
-          <p className="font-body text-xs tracking-wideish uppercase text-[#7a8b64] font-medium mb-5">
+        <div className="mt-24 text-center">
+          <p
+            className="font-body text-xs tracking-wideish uppercase text-[#7a8b64] font-medium mb-5"
+            data-aos="fade-up"
+          >
             Color of the day
           </p>
           <div className="flex items-center justify-center gap-6 flex-wrap">
@@ -188,8 +165,14 @@ export default function Events() {
               { name: "Green", hex: "#7a8b64" },
               { name: "Peach", hex: "#f2c9a9" },
               { name: "Milk", hex: "#fffaf0" },
-            ].map((c) => (
-              <div key={c.name} className="flex flex-col items-center gap-2 group/swatch">
+            ].map((c, i) => (
+              <div
+                key={c.name}
+                data-aos="fade-up"
+                data-aos-duration="1600"
+                data-aos-delay={i * 150}
+                className="flex flex-col items-center gap-2 group/swatch"
+              >
                 <span
                   className="w-12 h-12 rounded-full border-2 border-white shadow-md transition-transform duration-300 group-hover/swatch:-translate-y-2 group-hover/swatch:scale-110"
                   style={{ backgroundColor: c.hex }}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import img08 from "../assets/img08.jpeg";
+import AOS from "aos";
 
 const stories = [
   {
@@ -73,8 +74,12 @@ export default function Backstory() {
 
   const current = stories[index];
 
+  //animation to reflect on character change
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+
+    const t = setTimeout(() => AOS.refreshHard(), 50);
+    return () => clearTimeout(t);
   }, [index]);
 
   return (
@@ -99,17 +104,25 @@ export default function Backstory() {
         </div>
 
         <div
+          key={current.key}
           className={`max-w-5xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-start transition-opacity duration-200 ${
             fading ? "opacity-0" : "opacity-100"
           }`}
         >
           <img
+            data-aos="fade-right"
+            data-aos-delay="150"
+            data-aos-duration="1600"
             src={current.image}
             alt={current.name}
             className="w-full aspect-4/5 object-cover md:sticky md:top-24"
           />
 
-          <div>
+          <div
+            data-aos="fade-left"
+            data-aos-delay="150"
+            data-aos-duration="1600"
+          >
             <h2 className="font-display text-4xl text-[#7a8b64] mb-1">
               {current.name}
             </h2>

@@ -56,3 +56,19 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-24px) scale(1.06); }
+}
+@keyframes spinSlow {
+  to { transform: rotate(405deg); }
+}
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.floaty { animation: floaty 9s ease-in-out infinite; }
+

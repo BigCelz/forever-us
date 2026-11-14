@@ -91,8 +91,15 @@ export default function Faq() {
         </div>
 
         <div className="w-full max-w-2xl divide-y divide-[#e4e9d8]">
-          {faqs.map((faq) => (
-            <FaqItem key={faq.question} {...faq} />
+          {faqs.map((faq, i) => (
+            <div
+              key={faq.question}
+              data-aos="fade-up"
+              data-aos-duration="1600"
+              data-aos-delay={i * 150}
+            >
+              <FaqItem {...faq} />
+            </div>
           ))}
         </div>
       </main>
