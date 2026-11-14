@@ -47,7 +47,13 @@ export default function AllPhotos() {
 
         <div className="w-full max-w-5xl grid grid-cols-2 md:grid-cols-3 gap-6">
           {photos.map((p, i) => (
-            <figure key={i} className="rounded-lg overflow-hidden">
+            <figure
+              key={i}
+              data-aos="fade-right"
+              data-aos-duration="1600"
+              data-aos-delay={(i % 3) * 200}
+              className="rounded-lg overflow-hidden"
+            >
               <img
                 src={p.src}
                 alt={p.alt}

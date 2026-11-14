@@ -33,8 +33,14 @@ export default function Asoebi() {
         </div>
 
         <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-          {colours.map((item) => (
-            <div key={item.key} className="border border-[#4a3226]/15">
+          {colours.map((item, i) => (
+            <div
+              key={item.key}
+              data-aos="fade-up"
+              data-aos-duration="1600"
+              data-aos-delay={i * 150}
+              className="border border-[#4a3226]/15"
+            >
               <div className={`h-40 md:h-56 ${item.swatch}`} />
               <div className="p-4 text-center bg-[#faf5ec]">
                 <h2 className="font-display text-2xl text-[#6b7d55]">
