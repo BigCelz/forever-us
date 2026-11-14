@@ -17,7 +17,16 @@ export default function Footer() {
         Made with{" "}
         <span className="underline underline-offset-4 decoration-[#f2c9a9] text-[#faf5ec]">
           love
-        </span>
+        </span>{" "}
+        by{" "}
+        <a
+          href="https://wa.me/2347083429516"
+          target="_blank"
+          rel="noreferrer"
+          className="text-[#f2c9a9] hover:text-[#faf5ec] transition-colors duration-200"
+        >
+          Celz
+        </a>
       </p>
     </footer>
   );
