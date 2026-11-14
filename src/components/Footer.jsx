@@ -1,3 +1,5 @@
+import { FaHeart } from "react-icons/fa";
+
 export default function Footer() {
   return (
     <footer className="bg-[#3a2a20] text-[#faf5ec] text-center py-20 px-6">
@@ -13,7 +15,7 @@ export default function Footer() {
         December 2026
       </p>
 
-      <p className="font-body text-xs tracking-wideish uppercase text-[#faf5ec]/60 mt-16">
+      {/* <p className="font-body text-xs tracking-wideish uppercase text-[#faf5ec]/60 mt-16">
         Made with{" "}
         <spa>
           ❤️
@@ -27,7 +29,19 @@ export default function Footer() {
         >
           Celz
         </a>
-      </p>
+      </p> */}
+
+      <p className="font-body text-xs tracking-wideish uppercase text-[#faf5ec]/60 mt-16 flex items-center justify-center gap-2 flex-wrap">
+  Made with <FaHeart className="text-[#f2c9a9]" size={12} /> by{" "}
+  <a
+    href="https://wa.me/2347083429516"
+    target="_blank"
+    rel="noreferrer"
+    className="text-[#f2c9a9] hover:text-[#faf5ec] transition-colors duration-200 underline underline-offset-4 decoration-[#f2c9a9]"
+  >
+    Celz
+  </a>
+</p>
     </footer>
   );
 }
