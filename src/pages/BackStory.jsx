@@ -83,7 +83,7 @@ export default function Backstory() {
   }, [index]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#efe4d2]">
+    <div className="min-h-screen flex flex-col bg-[#efe4d2] overflow-x-clip">
       <main className="flex-1 px-6 py-20">
         <div className="text-center mb-20">
           <p className="font-body text-xs tracking-wideish uppercase text-[#7a8b64] font-medium mb-4 mt-3">
