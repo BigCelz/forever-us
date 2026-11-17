@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { HiX } from "react-icons/hi";
 import { RiMenu3Fill } from "react-icons/ri";
-import img07 from "../assets/img07.jpeg";
+import img07 from "../assets/img007.jpeg";
 
 const links = [
   { to: "/", label: "Home", end: true },
@@ -24,13 +24,8 @@ export default function Nav() {
       <div className="h-20 flex items-center justify-between md:px-6 px-3">
         {/* Brand */}
         <NavLink to="/" end className="flex items-center gap-3">
-          {/* <img
-            src={img07}
-            alt="Faith & Isaac Logo"
-            className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover ring-2 ring-[#f2c9a9]"
-          /> */}
           <img
-            src="/src/assets/img07.jpeg"
+            src={img07}
             alt="Faith & Isaac Logo"
             className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover ring-2 ring-[#f2c9a9]"
           />

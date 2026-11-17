@@ -173,7 +173,7 @@ export default function Events() {
                 data-aos-delay={i * 150}
                 className="flex flex-col items-center gap-2 group/swatch"
               >
-                <span
+               <span
                   className="w-12 h-12 rounded-full border-2 border-white shadow-md transition-transform duration-300 group-hover/swatch:-translate-y-2 group-hover/swatch:scale-110"
                   style={{ backgroundColor: c.hex }}
                 />

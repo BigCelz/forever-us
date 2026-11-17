@@ -5,7 +5,7 @@ import img03 from "../assets/img03.jpeg";
 import img04 from "../assets/img04.jpeg";
 import img05 from "../assets/img05.jpeg";
 import img06 from "../assets/img06.jpeg";
-import img07 from "../assets/img07.jpeg";
+import img07 from "../assets/img007.jpeg";
 import img08 from "../assets/img08.jpeg";
 import img09 from "../assets/img09.jpeg";
 import img10 from "../assets/img10.jpeg";
