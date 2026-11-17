@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "What time should I arrive?",
     answer:
-      "The ceremony will begin promptly at 2pm. Please plan to arrive at least 30 minutes early to find your seat and mingle. (And please, let's leave 'African Time' at the door for this one! 😉)",
+      "The ceremony starts at 10:00 AM sharp, so please plan to arrive by 9:30 AM to find your seat and settle in. The reception follows at 2:00 PM. We can't wait to celebrate with you, and please, let's leave 'African Time' at the door for this one! 😉",
   },
   {
     question: "Will there be a gift registry?",

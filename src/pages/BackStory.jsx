@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import img08 from "../assets/img08.jpeg";
+import img01 from "../assets/img01.jpeg";
 import AOS from "aos";
 
 const stories = [
@@ -24,33 +25,20 @@ Here’s to forever and a day❤️`,
   },
   {
     key: "groom",
-    name: "Efe",
+    name: "Isaac",
     label: "His Story",
-    image:
-      "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?fm=jpg&q=70&w=900&auto=format&fit=crop",
-    excerpt: `I'm from Warri, raised on jollof rivalries and my mother's
-insistence that I learn to cook properly before leaving home. I noticed
-Amara before she noticed me — it took me two months to work up the
-nerve to say so.`,
-    full: `I'm from Warri, raised on jollof rivalries and my mother's
-insistence that I learn to cook properly before leaving home. I noticed
-Amara before she noticed me — it took me two months to work up the
-nerve to say so.
+    image: img01,
+    excerpt: `Years ago, I would catch glimpses of this incredible girl walking through our school hallways. Even though we were never in the same classes, her presence alone captivated me entirely. `,
+    full: `Years ago, I would catch glimpses of this incredible girl walking through our school hallways. Even though we were never in the same classes, her presence alone captivated me entirely.
 
-She showed up to that birthday dinner already deep in conversation
-with someone else, laughing in a way that made the whole table look
-over. I told myself I'd say something clever. I did not say something
-clever. I said "the jollof here is actually decent," which, in
-hindsight, was a risky opening line in this economy.
+From a distance, she became my silent beautiful dream and a wish I held close to my heart. Yet, time and life eventually pulled us in different directions before I could even muster the courage to speak a single word to her.
 
-She humored me anyway. We ended up talking long after everyone else
-had left, and I remember walking to my car thinking I'd just met
-someone I couldn't afford to lose track of. So I didn't.
+But the universe had a far grander design. Destiny eventually brought Faith back into my world, proving that true dreams never really fade.
 
-Every trip, every argument about whose jollof recipe was correct,
-every quiet Sunday since — it all pointed here. I asked her on a
-Tuesday, because Tuesdays are when good things seem to happen to us.`,
-    quote: `"Some people you just know. She was one of them."`,
+I finally found my voice, and we began to talk. What started as a gentle, tender spark of admiration slowly blossomed into a profound and undeniable love.
+
+Now, my ultimate dream is our reality, and soon, we will be eternally joined as one.`,
+    quote: `"What started as a gentle, tender spark of admiration slowly blossomed into a profound and undeniable love."`,
   },
 ];
 
