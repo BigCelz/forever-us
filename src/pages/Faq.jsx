@@ -15,7 +15,7 @@ const faqs = [
   {
     question: "Are kids welcome?",
     answer:
-      "As much as we love your little ones, this will be an adults-only celebration — with the exception of immediate family.",
+      "As much as we love your little ones, this will be an adults-only celebration, with the exception of immediate family.",
   },
   {
     question: "Is there parking at the venue?",
@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "What time should I arrive?",
     answer:
-      "The ceremony starts at 10:00 AM sharp, so please plan to arrive by 9:30 AM to find your seat and settle in. The reception follows at 2:00 PM. We can't wait to celebrate with you, and please, let's leave 'African Time' at the door for this one! 😉",
+      "The ceremony starts at 11:00 AM sharp, so please plan to arrive by 10:30 AM to find your seat and settle in. The reception follows at 2:00 PM. We can't wait to celebrate with you, and please, let's leave 'African Time' at the door for this one! 😉",
   },
   {
     question: "Will there be a gift registry?",

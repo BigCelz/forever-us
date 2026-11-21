@@ -4,7 +4,7 @@ import { FaGlassCheers, FaMapMarkerAlt } from "react-icons/fa";
 const events = [
   {
     title: "Ceremony",
-    time: "10:00 AM",
+    time: "11:00 AM",
     icon: PiChurchBold,
     venue: "Immaculate Conception Catholic Church, Sabon Tasha, Kaduna",
     mapSrc:
