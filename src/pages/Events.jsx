@@ -6,7 +6,7 @@ const events = [
     title: "Ceremony",
     time: "11:00 AM",
     icon: PiChurchBold,
-    venue: "Immaculate Conception Catholic Church, Sabon Tasha, Kaduna",
+    venue: "Immaculate Conception Catholic Church, Sabon Tasha, Kaduna.",
     mapSrc:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.7507269710213!2d7.468200299999999!3d10.4413447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104d498833da12ed%3A0xdca8bda7a03adad6!2sImmaculate%20Conception%20Catholic%20Church%20Sabo.!5e0!3m2!1sen!2sng!4v1794565715310!5m2!1sen!2sng",
   },
@@ -15,7 +15,7 @@ const events = [
     time: "2:00 PM",
     icon: FaGlassCheers,
     venue:
-      "MAUREB EVENT CENTRE BY REFINERY JUNCTION, OPPOSITE ST. AUGUSTINE CATHOLIC CHURCH, MAHUTA, KADUNA.",
+      "Maureb Event Centre by Refinery junction opposite St. Augustine Catholic Church, Mahuta, Kaduna.",
     mapSrc:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4333.591959753894!2d7.496181278384739!3d10.442126138637857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104d35a10b91d9ef%3A0x2b46bb28829de71b!2sMaureb%20Event%20Center!5e0!3m2!1sen!2sng!4v1794565150155!5m2!1sen!2sng",
   },
@@ -37,16 +37,16 @@ export default function Events() {
 
       <main className="relative flex-1 flex flex-col items-center px-6 py-20">
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center sm:mb-12 mb-8">
           <p className="font-body text-xs tracking-wideish uppercase text-[#7a8b64] font-medium mb-4 mt-3">
             ✦ Schedule of Events ✦
           </p>
-          <h1 className="font-display text-5xl md:text-7xl text-[#4a3226]">
+          <h1 className="font-display text-4xl md:text-6xl text-[#4a3226]">
             Event{" "}
             <span className="italic shimmer-text">Details</span>
           </h1>
 
-          <div className="flex items-center justify-center gap-4 mt-8">
+          <div className="flex items-center justify-center gap-4 sm:mt-8 mt-4">
             <span className="w-14 h-px bg-[#7a8b64]" />
             <span
               className="w-3 h-3 bg-[#f2c9a9] rotate-45"
@@ -82,13 +82,13 @@ export default function Events() {
                     data-aos={reversed ? "fade-left" : "fade-right"}
                     data-aos-duration="1600"
                   >
-                    <div className="relative bg-white/50 backdrop-blur-sm rounded-3xl p-8 border border-[#f2c9a9]/60 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#f2c9a9]/40">
+                    <div className="relative bg-white/50 backdrop-blur-sm rounded-3xl p-8 border border-[#f2c9a9]/60 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#f2c9a9]/10">
                       <div className="relative">
                         <div className="w-14 h-14 rounded-full bg-[#7a8b64] text-[#efe4d2] flex items-center justify-center mb-5 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110">
                           <EventIcon size={26} />
                         </div>
 
-                        <h2 className="font-display text-4xl text-[#4a3226] italic mb-3">
+                        <h2 className="font-display text-3xl sm:text-4xl text-[#4a3226] mb-3">
                           {event.title}
                         </h2>
 
@@ -125,14 +125,14 @@ export default function Events() {
                   >
                     <div className="relative">
                       {/* Offset peach frame */}
-                      <div
+                      {/* <div
                         className={`absolute inset-0 rounded-3xl bg-[#f2c9a9] transition-transform duration-500 ${
                           reversed
                             ? "translate-x-3 translate-y-3 group-hover:translate-x-5 group-hover:translate-y-5"
                             : "-translate-x-3 translate-y-3 group-hover:-translate-x-5 group-hover:translate-y-5"
                         }`}
-                      />
-                      <div className="relative h-64 rounded-3xl overflow-hidden border-4 border-[#efe4d2] shadow-md">
+                      /> */}
+                      <div className="relative h-64 rounded-3xl overflow-hidden border-4 border-[#efe4d2] shadow-sm hover:-translate-y-2 transition-all duration-500 hover:shadow-xl hover:shadow-[#f2c9a9]/10">
                         <iframe
                           title={`${event.title} map`}
                           src={event.mapSrc}
